@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservas</title>
+    <style>
+        form {
+            padding: 10px;
+        }
+        input {
+            margin: 5px 0;
+        }
+    </style>
 </head>
 
 <header>
@@ -21,15 +29,109 @@
 
 <body>
     <h2>Reservas</h2>
-    <p>
-        Você pode efetuar sua reserva pelo telefone (12) 4321-1234 ou pelo nosso site, seguindo os passos abaixo:
-    <ol>
-        <li>Preencha o formulário a seguir.</li>
-        <li>Aguarde nosso contato telefônico, ou por e-mail, para confirmação da reserva.</li>
-        <li>Efetue a transferência do valor da reserva.</li>
-        <li>Envie o comprovante de transferência para o e-mail <a href="">atendimento@pousadaserraverde.tur.br</a>.</li>
-    </ol>
-    </p>
+    <div>
+        <p>
+            Você pode efetuar sua reserva pelo telefone (12) 4321-1234 ou pelo nosso site, seguindo os passos abaixo:
+        <ol>
+            <li>Preencha o formulário a seguir.</li>
+            <li>Aguarde nosso contato telefônico, ou por e-mail, para confirmação da reserva.</li>
+            <li>Efetue a transferência do valor da reserva.</li>
+            <li>Envie o comprovante de transferência para o e-mail <a href="">atendimento@pousadaserraverde.tur.br</a>.</li>
+        </ol>
+        </p>
+    </div>
+    <div>
+        <p><strong>Faça sua reserva agora na Pousada Serra Verde:</strong></p>
+        <fieldset>
+            <legend>Solicitação de Reserva</legend>
+            <form onsubmit="alert('Obrigado! Em breve, entraremos em contato para confirmação de sua reserva.')" oninput="saida_idade.value=idade.value + ' ano(s)'">
+                <div>
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" required>
+                </div>
+                <div>
+                    <label for="idade">Idade</label>
+                    <input type="range" name="idade" id="idade" min="18" max="130" value="18">
+                    <output id="saida_idade" for="idade">18 ano(s)</output>
+                </div>
+                <div>
+                    <label for="celular">Celular</label>
+                    <input type="tel" name="celular" id="celular" placeholder="99 99999-9999" pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" required>
+                </div>
+                <div>
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div>
+                    <label for="cidade">Cidade</label>
+                    <input type="text" name="cidade" id="cidade" required>
+                    <label for="UF">UF</label>
+                    <select name="UF" id="UF">
+                        <option value="SP">SP</option>
+                        <option value="RJ">RJ</option>
+                        <option value="MG">MG</option>
+                    </select>
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>Chalé</legend>
+                        <input type="radio" name="radio_chale" id="economico" checked>
+                        <label for="economico">Econômico</label>
+
+                        <input type="radio" name="radio_chale" id="standard">
+                        <label for="standard">Standard</label>
+
+                        <input type="radio" name="radio_chale" id="luxo">
+                        <label for="luxo">Luxo</label>
+
+                        <input type="radio" name="radio_chale" id="familia">
+                        <label for="familia">Família</label>
+                    </fieldset>
+                </div>
+                <div>
+                    <label for="chegada">Chegada</label>
+                    <input type="date" name="chegada" id="chegada" required>
+                </div>
+                <div>
+                    <label for="partida">Partida</label>
+                    <input type="date" name="partida" id="partida" required>
+                </div>
+                <div>
+                    <label for="adultos">Adultos</label>
+                    <input type="number" name="adultos" id="adultos" required>
+                </div>
+                <div>
+                    <label for="crianças">Crianças</label>
+                    <input type="number" name="crianças" id="crianças" required>
+                    <label for="ate_5_anos">Até 5 anos</label>
+                    <input type="number" name="ate_5_anos" id="ate_5_anos" required>
+                </div>
+                <div>
+                    <input type="checkbox" name="estacionamento" id="estacionamento">
+                    <label for="estacionamento">Quero reservar uma vaga no estacionamento</label>
+                </div>
+                <div>
+                    <label for="pagamento">Forma de Pagamento</label>
+                    <select name="pagamento" id="pagamento">
+                        <option value="ted/doc">Transferência (TED/DOC)</option>
+                        <option value="pix">Pix</option>
+                        <option value="deposito">Depósito</option>
+                        <optgroup label="Cartão de Crédito">
+                            <option value="mastercard">Mastercard</option>
+                            <option value="visa">Visa</option>
+                            <option value="elo">Elo</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div>
+                    <label for="especial">Se desejar, faça um edido especial, faremos o possível para atendê-lo:</label>
+                    <br>
+                    <textarea name="especial" id="especial" cols="63" rows="5" maxlength="400"></textarea>
+                </div>
+                <input type="submit" value="Solicitar Reserva">
+            </form>
+        </fieldset>
+    </div>
 </body>
 
 </html>
