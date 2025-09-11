@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="no-y-margin center-width">
+        <h1 class="title-font">Pousada Serra Verde</h1>
+        <nav id="barra-navegacao-principal" class="margin-auto">
+            <div class="div-botao-navegacao"><a class="a-navegacao" href="home.html">Home</a></div>
+            <div class="div-botao-navegacao"><a class="a-navegacao" href="apousada.html">A Pousada</a></div>
+            <div class="div-botao-navegacao"><a class="a-navegacao" href="reservas.html">Reservas</a></div>
+            <div class="div-botao-navegacao"><a class="a-navegacao" href="tarifas.html">Tarifas</a></div>
+            <div class="div-botao-navegacao"><a class="a-navegacao" href="como-chegar.html">Como Chegar</a></div>
+        </nav>
+    </header>
+
+    <section class="no-y-margin center-width">
+        <h2 class="title-font no-y-margin">Reservas</h2>
+        <div class="justify-align">
+            <p>
+                Você pode efetuar sua reserva pelo telefone (12) 4321-1234 ou pelo nosso site, seguindo os passos abaixo:
+            <ol>
+                <li>Preencha o formulário a seguir.</li>
+                <li>Aguarde nosso contato telefônico, ou por e-mail, para confirmação da reserva.</li>
+                <li>Efetue a transferência do valor da reserva.</li>
+                <li>Envie o comprovante de transferência para o e-mail <a href="">atendimento@pousadaserraverde.tur.br</a>.</li>
+            </ol>
+            </p>
+        </div>
+        <div class="justify-align">
+            <p><strong>Faça sua reserva agora na Pousada Serra Verde:</strong></p>
+            <fieldset>
+                <legend>Solicitação de Reserva</legend>
+                <form onsubmit="alert('Obrigado! Em breve, entraremos em contato para confirmação de sua reserva.')" oninput="saida_idade.value=idade.value + ' ano(s)'">
+                    <div class="div-input">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" required>
+                    </div>
+                    <div class="div-input">
+                        <label for="idade">Idade</label>
+                        <input type="range" name="idade" id="idade" min="18" max="130" value="18">
+                        <output id="saida_idade" for="idade">18 ano(s)</output>
+                    </div>
+                    <div class="div-input">
+                        <label for="celular">Celular</label>
+                        <input type="tel" name="celular" id="celular" placeholder="99 99999-9999" pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" required>
+                    </div>
+                    <div class="div-input">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="div-input">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" name="cidade" id="cidade" required>
+                        <label for="UF">UF</label>
+                        <select name="UF" id="UF">
+                            <option value="SP">SP</option>
+                            <option value="RJ">RJ</option>
+                            <option value="MG">MG</option>
+                        </select>
+                    </div>
+                    <div class="div-input">
+                        <fieldset class="fieldset-chale">
+                            <legend>Chalé</legend>
+                            <input class="radio-chale" type="radio" name="radio_chale" id="economico" checked>
+                            <label for="economico">Econômico</label>
+                            <input class="radio-chale" type="radio" name="radio_chale" id="standard">
+                            <label for="standard">Standard</label>
+                            <input class="radio-chale" type="radio" name="radio_chale" id="luxo">
+                            <label for="luxo">Luxo</label>
+                            <input class="radio-chale" type="radio" name="radio_chale" id="familia">
+                            <label for="familia">Família</label>
+                        </fieldset>
+                    </div>
+                    <div class="div-input">
+                        <label for="chegada">Chegada</label>
+                        <input type="date" name="chegada" id="chegada" required>
+                    </div>
+                    <div class="div-input">
+                        <label for="partida">Partida</label>
+                        <input type="date" name="partida" id="partida" required>
+                    </div>
+                    <div class="div-input">
+                        <label for="adultos">Adultos</label>
+                        <input type="number" name="adultos" id="adultos" required>
+                    </div>
+                    <div class="div-input">
+                        <label for="crianças">Crianças</label>
+                        <input type="number" name="crianças" id="crianças" required>
+                        <label for="ate_5_anos">Até 5 anos</label>
+                        <input type="number" name="ate_5_anos" id="ate_5_anos" required>
+                    </div>
+                    <div class="div-input">
+                        <input type="checkbox" name="estacionamento" id="estacionamento">
+                        <label for="estacionamento">Quero reservar uma vaga no estacionamento</label>
+                    </div>
+                    <div class="div-input">
+                        <label for="pagamento">Forma de Pagamento</label>
+                        <select name="pagamento" id="pagamento">
+                            <option value="ted/doc">Transferência (TED/DOC)</option>
+                            <option value="pix">Pix</option>
+                            <option value="deposito">Depósito</option>
+                            <optgroup label="Cartão de Crédito">
+                                <option value="mastercard">Mastercard</option>
+                                <option value="visa">Visa</option>
+                                <option value="elo">Elo</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="div-input">
+                        <label for="especial">Se desejar, faça um edido especial, faremos o possível para atendê-lo:</label>
+                        <br>
+                        <textarea name="especial" id="especial" cols="63" rows="5" maxlength="400"></textarea>
+                    </div>
+                    <input class="submit-button" type="submit" value="Solicitar Reserva">
+                </form>
+            </fieldset>
+        </div>
+    </section>
+
+    <footer class="no-y-margin center-width">
+        <p class="no-y-margin"><strong>Desenvolvido por Tech Hotelaria</strong></p>
+    </footer>
+</body>
+
+</html>

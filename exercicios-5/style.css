@@ -1,0 +1,157 @@
+body {
+    font-family: cursive;
+    background-image: url("images/folhas.png");
+    text-align: center;
+}
+
+header {
+    background-image: url("images/paisagem.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    align-content: center;
+    text-align: center;
+    padding: 2rem;
+    height: fit-content;
+}
+
+section {
+    background: linear-gradient(#528c54, #98fd96);
+    padding: 2rem;
+}
+
+footer {
+    background-color: #558a54;
+    padding: 0.25rem 2rem;
+}
+
+h1 {
+    color: #556944;
+    font-size: 6em;
+    margin: 2.5%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+img {
+    margin: 0.5rem;
+}
+
+table {
+    background-color: black;
+}
+
+thead {
+    margin: auto;
+    background-color: #558955;
+}
+
+th {
+    margin: auto;
+}
+
+td {
+    margin: auto;
+    background-color: white;
+}
+
+form {
+    padding: 10px;
+}
+        
+
+fieldset {
+    padding: 0.5rem 0.75rem;
+    border-color: #A0A0A0;
+}
+
+.fieldset-chale {
+    display: inline-flex;
+    justify-items: left;
+    justify-items: left;
+    width: 95%;
+}
+
+.radio-chale {
+    margin: 0 10px;
+}
+
+label {
+    width: fit-content;
+}
+
+input {
+    font-family: cursive;
+    height: 1.25rem;
+    padding: 0.25rem;
+    margin: 5px 0;
+}
+
+select {
+    font-family: cursive;
+    height: 2rem;
+}
+
+.div-botao-navegacao {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    background-color: whitesmoke;
+    border-radius: 12px;
+    border: 2px solid #787973;
+    margin: 0 0.1%;
+}
+
+.div-input {
+    margin: 0.05rem 0;
+}
+
+.a-navegacao {
+    display: block;
+    width: 10rem;
+    margin: auto;
+    padding: 0.25rem;
+    color: #79965f;
+    font-family: cursive;
+    text-decoration: none;
+}
+
+.center-width {
+    width: 70%;
+}
+
+.justify-align {
+    text-align: justify;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.no-y-margin {
+    margin: 0 auto;
+}
+
+.margin-auto {
+    margin: auto;
+}
+
+.title-font {
+    font-family: "Birthstone", cursive;
+    font-style: normal;
+}
+
+.submit-button {
+    height: auto;
+}
+
