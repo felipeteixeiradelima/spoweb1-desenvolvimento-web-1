@@ -1,3 +1,15 @@
+footer p { /* EXEMPLO DE SELETOR DESCENTE */
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+p + ul { /* EXEMPLO DE SELETOR IRMÃO ADJASCENTE */
+    font-weight: bold;
+    color: white;
+    -webkit-text-stroke: gray 0.5px;
+}
+
 body {
     font-family: cursive;
     background-image: url("images/folhas.png");
