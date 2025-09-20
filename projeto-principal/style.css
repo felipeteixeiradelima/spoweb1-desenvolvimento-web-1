@@ -1,8 +1,63 @@
+/* =========================================================================================================== */
+/*  EXEMPLO DE SELETOR DESCENDENTE,
+    mudança de cor e fonte do footer, vísivel em todas as páginas */
+footer p {
+    color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* =========================================================================================================== */
+/*  EXEMPLO DE SELETOR IRMÃO ADJASCENTE:
+    cor do texto de divs, vísiveis nas páginas 'a pousada', 'reservas' e 'como chegar' */
+h2 + div {
+    color: cornsilk;
+    -webkit-text-stroke: rgba(105, 105, 105, 0.5) 0.5px;
+}
+
+/* =========================================================================================================== */
+/*  EXEMPLOS DE SELETOR PSEUDOCLASSE:
+    animações nos botões de navegação entre as páginas HTML  */
+@keyframes expandirBotao {
+    from {}
+    to { transform: scale(1.05); }
+}
+
+.div-botao-navegacao:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+.div-botao-navegacao:active {
+    animation: expandirBotao 0.05s ease-out forwards;
+}
+
+/* =========================================================================================================== */
+/*  EXEMPLO DE SELETOR PSEUDOELEMENTO:
+    emojis visíveis no footer         */
+footer p::before {
+    content: "🖥️ ";
+}
+
+footer p::after {
+    content: " 🖥️";
+}
+
+/* =========================================================================================================== */
+/*  EXEMPLO DE GENERALIZAÇÃO:
+    as fontes de todos os elementos das páginas herdam de body a família 'cursive' */
 body {
     font-family: cursive;
     background-image: url("images/folhas.png");
     text-align: center;
 }
+
+/* =========================================================================================================== */
+/*  EXEMPLO DE ESPECIALIZAÇÃO:
+    classe .title-font sobrescreve a família de fontes para "Birthstone" */
+.title-font {
+    font-family: "Birthstone", cursive;
+    font-style: normal;
+}
+/* =========================================================================================================== */
 
 header {
     background-image: url("images/paisagem.png");
@@ -109,7 +164,9 @@ select {
     background-color: whitesmoke;
     border-radius: 12px;
     border: 2px solid #787973;
-    margin: 0 0.1%;
+    margin: 0 0.2%;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .div-input {
@@ -144,11 +201,6 @@ select {
 
 .margin-auto {
     margin: auto;
-}
-
-.title-font {
-    font-family: "Birthstone", cursive;
-    font-style: normal;
 }
 
 .submit-button {
